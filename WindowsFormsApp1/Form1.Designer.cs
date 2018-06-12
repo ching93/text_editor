@@ -37,11 +37,11 @@
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.colorBtn = new System.Windows.Forms.Button();
-            this.boldBtn = new System.Windows.Forms.Button();
-            this.italicBtn = new System.Windows.Forms.Button();
-            this.underlineBtn = new System.Windows.Forms.Button();
             this.FontSizeUpDown = new System.Windows.Forms.NumericUpDown();
+            this.underlineBtn = new System.Windows.Forms.Button();
+            this.italicBtn = new System.Windows.Forms.Button();
+            this.boldBtn = new System.Windows.Forms.Button();
+            this.colorBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FontSizeUpDown)).BeginInit();
@@ -81,28 +81,28 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
             // создатьНовыйToolStripMenuItem
             // 
             this.создатьНовыйToolStripMenuItem.Name = "создатьНовыйToolStripMenuItem";
-            this.создатьНовыйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.создатьНовыйToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.создатьНовыйToolStripMenuItem.Text = "Создать новый";
             this.создатьНовыйToolStripMenuItem.Click += new System.EventHandler(this.создатьНовыйToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // печатьToolStripMenuItem
             // 
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
-            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.печатьToolStripMenuItem.Text = "Печать";
             this.печатьToolStripMenuItem.Click += new System.EventHandler(this.печатьToolStripMenuItem_Click);
             // 
@@ -111,6 +111,7 @@
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -125,35 +126,13 @@
             this.panel1.Size = new System.Drawing.Size(772, 40);
             this.panel1.TabIndex = 2;
             // 
-            // colorBtn
+            // FontSizeUpDown
             // 
-            this.colorBtn.Location = new System.Drawing.Point(475, 8);
-            this.colorBtn.Name = "colorBtn";
-            this.colorBtn.Size = new System.Drawing.Size(75, 23);
-            this.colorBtn.TabIndex = 0;
-            this.colorBtn.Text = "Цвет";
-            this.colorBtn.UseVisualStyleBackColor = true;
-            this.colorBtn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // boldBtn
-            // 
-            this.boldBtn.Location = new System.Drawing.Point(348, 8);
-            this.boldBtn.Name = "boldBtn";
-            this.boldBtn.Size = new System.Drawing.Size(32, 23);
-            this.boldBtn.TabIndex = 1;
-            this.boldBtn.Text = "B";
-            this.boldBtn.UseVisualStyleBackColor = true;
-            this.boldBtn.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // italicBtn
-            // 
-            this.italicBtn.Location = new System.Drawing.Point(386, 8);
-            this.italicBtn.Name = "italicBtn";
-            this.italicBtn.Size = new System.Drawing.Size(32, 23);
-            this.italicBtn.TabIndex = 2;
-            this.italicBtn.Text = "I";
-            this.italicBtn.UseVisualStyleBackColor = true;
-            this.italicBtn.Click += new System.EventHandler(this.button3_Click);
+            this.FontSizeUpDown.Location = new System.Drawing.Point(253, 11);
+            this.FontSizeUpDown.Name = "FontSizeUpDown";
+            this.FontSizeUpDown.Size = new System.Drawing.Size(89, 20);
+            this.FontSizeUpDown.TabIndex = 4;
+            this.FontSizeUpDown.ValueChanged += new System.EventHandler(this.FontSizeUpDown_ValueChanged);
             // 
             // underlineBtn
             // 
@@ -165,13 +144,35 @@
             this.underlineBtn.UseVisualStyleBackColor = true;
             this.underlineBtn.Click += new System.EventHandler(this.button4_Click);
             // 
-            // FontSizeUpDown
+            // italicBtn
             // 
-            this.FontSizeUpDown.Location = new System.Drawing.Point(253, 11);
-            this.FontSizeUpDown.Name = "FontSizeUpDown";
-            this.FontSizeUpDown.Size = new System.Drawing.Size(89, 20);
-            this.FontSizeUpDown.TabIndex = 4;
-            this.FontSizeUpDown.ValueChanged += new System.EventHandler(this.FontSizeUpDown_ValueChanged);
+            this.italicBtn.Location = new System.Drawing.Point(386, 8);
+            this.italicBtn.Name = "italicBtn";
+            this.italicBtn.Size = new System.Drawing.Size(32, 23);
+            this.italicBtn.TabIndex = 2;
+            this.italicBtn.Text = "I";
+            this.italicBtn.UseVisualStyleBackColor = true;
+            this.italicBtn.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // boldBtn
+            // 
+            this.boldBtn.Location = new System.Drawing.Point(348, 8);
+            this.boldBtn.Name = "boldBtn";
+            this.boldBtn.Size = new System.Drawing.Size(32, 23);
+            this.boldBtn.TabIndex = 1;
+            this.boldBtn.Text = "B";
+            this.boldBtn.UseVisualStyleBackColor = true;
+            this.boldBtn.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // colorBtn
+            // 
+            this.colorBtn.Location = new System.Drawing.Point(475, 8);
+            this.colorBtn.Name = "colorBtn";
+            this.colorBtn.Size = new System.Drawing.Size(75, 23);
+            this.colorBtn.TabIndex = 0;
+            this.colorBtn.Text = "Цвет";
+            this.colorBtn.UseVisualStyleBackColor = true;
+            this.colorBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -183,7 +184,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Текстовый редактор";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

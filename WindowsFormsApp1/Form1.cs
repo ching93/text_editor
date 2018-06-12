@@ -46,6 +46,7 @@ namespace WindowsFormsApp1
                 SaveFileDialog fod = new SaveFileDialog();
                 fod.Title = "Создание нового файла";
                 fod.DefaultExt = "*.rtf";
+                fod.Filter = "Rtf files|*.rtf";
                 if (fod.ShowDialog() != DialogResult.Cancel)
                 {
                     filename = fod.FileName;
@@ -87,6 +88,8 @@ namespace WindowsFormsApp1
                 else
                 {
                     var sfd = new SaveFileDialog();
+                    sfd.DefaultExt = "*.rtf";
+                    sfd.Filter = "Rtf files|*.rtf";
                     if (sfd.ShowDialog() == DialogResult.OK)
                     {
                         filename = sfd.FileName;
@@ -154,6 +157,8 @@ namespace WindowsFormsApp1
         {
             pd = new PrintDialog();
             pdoc = new PrintDocument();
+            pdoc.BeginPrint += OnBeginPrint;
+            pdoc.PrintPage += OnPrintPage;
             if (pd.ShowDialog() == DialogResult.OK)
             {
                 pdoc.Print();
@@ -204,6 +209,11 @@ namespace WindowsFormsApp1
                 else
                     e.HasMorePages = false;
             }
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
